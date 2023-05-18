@@ -1,3 +1,18 @@
+//Header
+
+const header = document.getElementById("main__header");
+let prevScrollPos = window.pageYOffset;
+function handleScroll() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
+    header.style.top = "0";
+  } else {
+    header.style.top = `-${header.offsetHeight}px`;
+  }
+  prevScrollPos = currentScrollPos;
+}
+window.addEventListener("scroll", handleScroll);
+
 // Hero Section
 
 let myCarousel = document.querySelectorAll(
@@ -8,7 +23,6 @@ myCarousel.forEach((el) => {
   let next = el.nextElementSibling;
   for (var i = 1; i < minPerSlide; i++) {
     if (!next) {
-      // wrap carousel by using first child
       next = myCarousel[0];
     }
     let cloneChild = next.cloneNode(true);

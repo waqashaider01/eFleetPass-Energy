@@ -48,6 +48,13 @@ body {
 
 /* ##############################  Header  ################################## */
 
+#main__header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
 /* ---Header Logo--- */
 .header_logo img {
   width: 200px;
