@@ -30,3 +30,38 @@ myCarousel.forEach((el) => {
     next = next.nextElementSibling;
   }
 });
+
+// Providing Electric Vehicle Bannar JavaScript counter code
+
+function startCounter() {
+  let count = 0;
+  const endValue = 867;
+  const counterElement = document.getElementById("counter");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const intervalId = setInterval(() => {
+          count++;
+          counterElement.textContent = count.toLocaleString();
+
+          if (count >= endValue) {
+            clearInterval(intervalId);
+          }
+        }, 5);
+        counterElement.classList.add("counter");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(document.querySelector(".providing__vehicle__banner__img"));
+}
+
+startCounter();

@@ -225,42 +225,7 @@
             </div>
         </div>
 
-        <script>
-            // JavaScript counter code
-            function startCounter() {
-                let count = 0;
-                const endValue = 867; // Specify the desired end value for the counter
-                const counterElement = document.getElementById('counter');
 
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5,
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            const intervalId = setInterval(() => {
-                                count++;
-                                counterElement.textContent = count.toLocaleString();
-
-                                if (count >= endValue) {
-                                    clearInterval(intervalId); // Stop the counter when the end value is reached
-                                }
-                            }, 5); // Interval duration: 200 milliseconds (0.2 seconds)
-
-                            counterElement.classList.add('counter'); // Add class to enable transition effect
-                            observer.unobserve(entry.target); // Stop observing once the banner becomes visible
-                        }
-                    });
-                }, observerOptions);
-
-                observer.observe(document.querySelector('.providing__vehicle__banner__img'));
-            }
-
-            startCounter();
-        </script>
     </main>
     <!-- --------------------------------Footer----------------------------- -->
     <footer></footer>
