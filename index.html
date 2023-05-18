@@ -69,9 +69,9 @@
     </header>
     <!-- --------------------------------Main Section----------------------------- -->
     <main>
-        <!-- ---------Hero Banner--------- -->
+        <!-- ------------------Hero Banner--------------------- -->
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner carousel_banner">
+            <div class="carousel-inner carousel_banner mb-6">
 
                 <!-- ---carousel item 1 content--- -->
                 <div class="carousel-item hero__banner__bg active">
@@ -79,7 +79,7 @@
                     <div class="hero__banner__gradient__overlay"></div>
                     <div class="hero__carousel__item">
                         <div class="container">
-                            <div class="row d-flex justify-content-start">
+                            <div class="row carousel__row d-flex justify-content-md-start justify-content-sm-center">
                                 <div class="col-8">
                                     <h6 class="text-uppercase">we serve what you need.</h6>
                                     <h1 class="mb-4">Empowering Electric Vehicle with <span>Smarter Charging
@@ -113,7 +113,7 @@
                     <div class="hero__banner__gradient__overlay"></div>
                     <div class="hero__carousel__item">
                         <div class="container">
-                            <div class="row d-flex justify-content-start">
+                            <div class="row carousel__row d-flex justify-content-md-start justify-content-sm-center">
                                 <div class="col-8">
                                     <h6 class="text-uppercase">we serve what you need.</h6>
                                     <h1 class="mb-4">Empowering Electric Vehicle with <span>Smarter Charging
@@ -148,7 +148,7 @@
                     <div class="hero__banner__gradient__overlay"></div>
                     <div class="hero__carousel__item">
                         <div class="container">
-                            <div class="row d-flex justify-content-start">
+                            <div class="row carousel__row d-flex justify-content-md-start justify-content-sm-center">
                                 <div class="col-8">
                                     <h6 class="text-uppercase">we serve what you need.</h6>
                                     <h1 class="mb-4">The Smart Choice: Unleashing the Smarter <span>Chargers for
@@ -191,6 +191,76 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        <!-- ------------------Providing Electric Vehicle Bannar--------------------- -->
+
+        <div class="container mb-6">
+            <div class="content__row row justify-content-lg-center">
+                <!-- ----column 1----- -->
+                <div class="col-lg-5 col-md-6 mt-4 mb-5">
+                    <div class="providing__vehicle__banner__img">
+                        <img src="images/Rectangle 3.png" alt="">
+                        <div class="customer__count">
+                            <span id="counter" class="count">0</span>+ <br>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----column 2----- -->
+                <div class="col-lg-4 col-md-6 ms-lg-5 ms-md-0">
+                    <!-- ---Banner content--- -->
+                    <div class="banners__content__1">
+                        <h6 class="">ABOUT efleetpass ENERGY</h6>
+                        <h1 class="mb-4">We Provide Best Solutions For Your <span>Electric Vehicle</span></h1>
+                        <p class="lh-base mb-3">When it comes to electric vehicles (EVs), finding the best solutions is
+                            essential to maximize your driving experience and ensure optimal performance. Our dedicated
+                            team is committed to providing top-notch solutions tailored specifically to your EV needs.
+                        </p>
+                        <!-- ---Banner content buttons--- -->
+                        <div class="Content__button d-flex justify-content-start">
+                            <button type="submit" class="btn btn-primary content__btn__primary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // JavaScript counter code
+            function startCounter() {
+                let count = 0;
+                const endValue = 867; // Specify the desired end value for the counter
+                const counterElement = document.getElementById('counter');
+
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5,
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const intervalId = setInterval(() => {
+                                count++;
+                                counterElement.textContent = count.toLocaleString();
+
+                                if (count >= endValue) {
+                                    clearInterval(intervalId); // Stop the counter when the end value is reached
+                                }
+                            }, 5); // Interval duration: 200 milliseconds (0.2 seconds)
+
+                            counterElement.classList.add('counter'); // Add class to enable transition effect
+                            observer.unobserve(entry.target); // Stop observing once the banner becomes visible
+                        }
+                    });
+                }, observerOptions);
+
+                observer.observe(document.querySelector('.providing__vehicle__banner__img'));
+            }
+
+            startCounter();
+        </script>
     </main>
     <!-- --------------------------------Footer----------------------------- -->
     <footer></footer>

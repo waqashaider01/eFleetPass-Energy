@@ -35,6 +35,10 @@ body {
   margin-right: 6rem;
 }
 
+.mb-6 {
+  margin-bottom: 5rem;
+}
+
 /* padding */
 
 .my-6 {
@@ -164,7 +168,7 @@ body {
 
 /* ##############################  Main  ################################## */
 
-/* ---------Hero Banner--------- */
+/* ---------------------------Hero Banner-------------------------- */
 
 .hero__banner__bg {
   position: relative;
@@ -254,7 +258,7 @@ body {
   font-size: 16px;
 }
 
-/* ---carousel content buttons--- */
+/* ---------carousel content buttons---------- */
 
 .hero__banner__carousel__buttons {
   gap: 2rem;
@@ -354,4 +358,239 @@ body {
   width: 100%;
 }
 
+/* ---------Media Query-------- */
+/* Add media queries for responsiveness */
+@media (max-width: 767px) {
+  .carousel__row {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__carousel__item {
+    top: 40%;
+  }
+  .hero__carousel__item h6 {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--txt-blue-color);
+  }
+
+  .hero__carousel__item h1 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--txt-white-color);
+  }
+
+  .hero__carousel__item h1 span {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--txt-blue-color);
+  }
+
+  .hero__carousel__item p {
+    color: var(--txt-white-color);
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero__carousel__item {
+    top: 45%;
+  }
+  .hero__carousel__item h6 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--txt-blue-color);
+  }
+
+  .hero__carousel__item h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--txt-white-color);
+  }
+
+  .hero__carousel__item h1 span {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--txt-blue-color);
+  }
+
+  .hero__carousel__item p {
+    color: var(--txt-white-color);
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1240px) {
+  .hero__carousel__item {
+    top: 40%;
+  }
+  .hero__carousel__item h6 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--txt-blue-color);
+  }
+
+  .hero__carousel__item h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--txt-white-color);
+  }
+
+  .hero__carousel__item h1 span {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--txt-blue-color);
+  }
+
+  .hero__carousel__item p {
+    color: var(--txt-white-color);
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+/* ------------------Providing Electric Vehicle Bannar--------------------- */
+
+/* ----column 1----- */
+
+.providing__vehicle__banner__img {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.providing__vehicle__banner__img img {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.customer__count {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--bg-color-blue-shade);
+  color: white;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.customer__count p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ----column 2----- */
+
+/* ---Banner content--- */
+
+.banners__content__1 {
+  text-align: left;
+}
+
+.banners__content__1 h6 {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--txt-blue-color);
+}
+
+.banners__content__1 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-black-color);
+}
+
+.banners__content__1 h1 span {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-blue-color);
+}
+
+.banners__content__1 p {
+  color: var(--txt-black-color);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ---Banner content buttons---  */
+
+.content__btn__primary {
+  border-radius: 8px !important;
+  background: var(--bg-color-blue-shade) !important;
+  font-weight: 700 !important;
+  font-size: 18px;
+  color: var(--txt-white-color);
+  border: 1px solid var(--bd-blue-color) !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.content__btn__primary:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color-blue-shade);
+  border-radius: 8px;
+  z-index: -2;
+}
+.content__btn__primary:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--bg-color-black-shade);
+  transition: all 0.3s;
+  border-radius: 8px;
+  z-index: -1;
+}
+.content__btn__primary:hover {
+  color: var(--txt-blue-color) !important;
+  border: 1px solid var(--bd-white-color) !important;
+}
+.content__btn__primary:hover:before {
+  width: 100%;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .banners__content__1 h6 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--txt-blue-color);
+  }
+
+  .banners__content__1 h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--txt-black-color);
+  }
+
+  .banners__content__1 h1 span {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--txt-blue-color);
+  }
+
+  .banners__content__1 p {
+    color: var(--txt-black-color);
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
 /* ##############################  Footer  ################################## */
