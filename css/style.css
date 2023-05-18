@@ -1,0 +1,272 @@
+:root {
+  /* ---Background Colors---- */
+  --bg-color-black-shade: #0c0d10;
+  --bg-color-light-grey-shade: #ebecf7;
+  --bg-color-light-grey-shade-2: #ebecf6;
+  --bg-color-blue-shade: #00aeef;
+
+  /* ---Text Colors---- */
+  --txt-white-color: #ffffff;
+  --txt-blue-color: #00aeef;
+  --txt-black-color: #1e1e1e;
+  --txt-dark-gery-color: #727272;
+
+  /* ---Border Colors---- */
+  --bd-white-color: #ffffff;
+
+  /* ---Gradient Colors---- */
+  --grad-linear-blackish-shade: linear-gradient(
+    252.61deg,
+    #000000 -0.22%,
+    rgba(0, 0, 0, 0) 108.72%
+  );
+}
+
+body {
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+/* ************************  Customized Classes  *********************** */
+
+/* margin */
+.me-6 {
+  margin-right: 6rem;
+}
+
+/* padding */
+
+.my-6 {
+  padding-top: 12.5rem;
+  padding-bottom: 5rem;
+}
+
+/* ##############################  Header  ################################## */
+
+/* ---Header Logo--- */
+.header_logo img {
+  width: 200px;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.transparent__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.transparent__header.scrolled {
+  background-color: var(--bg-color-black-shade);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* ---Header Toggle Button--- */
+
+.header__navbar__light .header__navbar_toggler {
+  border-color: var(--bd-white-color) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__navbar__light .navbar-toggler-icon {
+  background-image: none !important;
+}
+
+.header__navbar__light .navbar-toggler-icon i {
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--txt-white-color) !important;
+}
+
+.header__navbar_toggler:focus {
+  box-shadow: none !important;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+  outline: 0px;
+  box-shadow: none !important;
+}
+
+/* ---Header NavBar Button--- */
+
+.header__navbar__nav {
+  gap: 2rem;
+}
+
+.header__navbar__nav li a {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-white-color) !important;
+  transition: 0.2s ease-in-out;
+}
+
+.header__navbar__nav li a:hover {
+  color: var(--txt-blue-color) !important;
+}
+
+/* DropDown Menu */
+
+.header__dropdown_item {
+  background-color: var(--bd-white-color) !important;
+  color: var(--txt-black-color) !important;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header__dropdown_item:active {
+  color: var(--txt-black-color) !important;
+  text-decoration: none;
+  background-color: var(--bd-white-color) !important;
+}
+
+.header__navbar__nav__dropdown .header__dropdown__menu .header__dropdown_item {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-black-color) !important;
+  transition: 0.2s ease-in-out;
+}
+
+.header__navbar__nav__dropdown
+  .header__dropdown__menu
+  .header__dropdown_item:hover {
+  color: var(--txt-blue-color) !important;
+}
+
+/* ---Header Social Button--- */
+
+.fa-solid,
+.fas {
+  font-weight: 900 !important;
+}
+
+.header__social__icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__social__icons i {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-white-color) !important;
+  transition: 0.2s ease-in-out;
+}
+
+.header__social__icons i:hover {
+  color: var(--txt-blue-color) !important;
+}
+
+/* ##############################  Main  ################################## */
+
+/* ---------Hero Banner--------- */
+
+.hero__banner__bg__1,
+.hero__banner__bg__2,
+.hero__banner__bg__3 {
+  object-fit: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero__banner__bg__1 {
+  background-image: url(../images/chuttersnap-xJLsHl0hIik-unsplash\ 1.png);
+}
+
+.hero__banner__bg__2 {
+  background-image: url(../images/chuttersnap-xJLsHl0hIik-unsplash\ 1.png);
+}
+
+.hero__banner__bg__3 {
+  background-image: url(../images/chuttersnap-xJLsHl0hIik-unsplash\ 1.png);
+}
+
+/* ---carousel items content--- */
+
+.hero__carousel__item {
+  text-align: left;
+}
+
+.hero__carousel__item h6 {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--txt-white-color);
+}
+
+.hero__carousel__item h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-white-color);
+}
+
+.hero__carousel__item h1 span {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-blue-color);
+}
+
+/* ---carousel content buttons--- */
+
+.carousel__btn__primary {
+  border-radius: 50px !important;
+  background-color: var(--bg_color_peach) !important;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid var(--bg_color_peach) !important;
+}
+
+.carousel__btn__primary:focus {
+  color: #fff;
+  background-color: var(--bg_color_peach) !important;
+  border-color: var(--bg_color_peach) !important;
+  box-shadow: none !important;
+}
+
+.carousel__btn__primary {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.carousel__btn__primary:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg_color_peach);
+  border-radius: 10rem;
+  z-index: -2;
+}
+.carousel__btn__primary:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ce2a2a;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.carousel__btn__primary:hover {
+  color: #fff;
+}
+.carousel__btn__primary:hover:before {
+  width: 100%;
+}
+
+/* ##############################  Footer  ################################## */
