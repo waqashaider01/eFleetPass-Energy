@@ -185,8 +185,8 @@ body {
 .hero__banner__bg img {
   display: block;
   width: 100%;
-  height: 100vh;
-  /* height: auto; */
+  /* height: 100vh; */
+  height: auto;
 }
 
 .hero__banner__gradient__overlay {
@@ -704,4 +704,199 @@ body {
 
 /* ----------------Download Our App Bannar----------------------- */
 
+.app__banner {
+  overflow: hidden;
+}
+
+/* ---row 2--- */
+
+.app__banner__row {
+  /* position: relative; */
+}
+
+.ev__charging_img__2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__charging_img__2 img {
+  width: 50%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.ev__charging_content__2 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ev__charging_content__2 h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--txt-black-color);
+}
+
+.ev__charging_content__2 p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-dark-gery-color);
+}
+
+/* ---row 3--- */
+
+.ev__charging_img__2__arrow {
+  position: relative;
+  bottom: 150px;
+  left: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__charging_img__2__arrow img {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* ---row 4--- */
+
+.app__banner__4 {
+  position: relative;
+  bottom: 220px;
+  left: 50px;
+}
+
+/* ---row 5--- */
+
+.ev__charging_img__2__arrow__1 {
+  position: relative;
+  bottom: 450px;
+  left: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__charging_img__2__arrow__1 img {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* ---row 6--- */
+
+.app__banner__6 {
+  position: relative;
+  bottom: 580px;
+  /* left: 50px; */
+  z-index: 100;
+}
+
+/* ---row 7--- */
+
+.ev__charging_img__2__arrow__2 {
+  position: relative;
+  bottom: 663px;
+  left: -117px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__charging_img__2__arrow__2 img {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* ----buttons---- */
+.row__anchor__button {
+  position: relative;
+  bottom: 659px;
+  left: 0;
+  right: 0;
+}
+
+.anchor_f_1 {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.anchor_f_1 img {
+  width: 80%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.anchor_f_2 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.anchor_f_2 img {
+  width: 90%;
+  object-fit: cover;
+  background-size: cover;
+}
+
 /* ##############################  Footer  ################################## */
+
+.footer__bg__color {
+  background: var(--bg-color-black-shade);
+}
+
+.footer__col__img {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.footer__col__img img {
+  width: 80%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.col__1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__col p {
+  color: var(--txt-white-color);
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer__col h4 {
+  color: var(--txt-white-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footer__col ul {
+  /* padding-left: 0; */
+}
+
+.footer__col ul {
+  list-style-type: none;
+}
+
+.footer__col ul li a {
+  color: var(--txt-white-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration-line: underline;
+}
