@@ -521,7 +521,7 @@ body {
 }
 
 .banners__content__1 p {
-  color: var(--txt-black-color);
+  color: var(--txt-dark-gery-color);
   font-weight: 400;
   font-size: 16px;
 }
@@ -595,9 +595,113 @@ body {
   }
 
   .banners__content__1 p {
-    color: var(--txt-black-color);
+    color: var(--txt-dark-gery-color);
     font-weight: 400;
     font-size: 16px;
   }
 }
+
+/* ------------------------------Find Us Bannar------------------------- */
+
+.find__us__bg {
+  background: var(--bg-color-light-grey-shade);
+  /* margin-bottom: 6rem; */
+}
+
+/* ----------------Best EV Charging Stations Bannar------------------- */
+
+/* ---row 1--- */
+
+/* ---Banner content 2---  */
+
+.banner__content__2 {
+  text-align: center;
+}
+
+.banner__content__2 h6 {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--txt-blue-color);
+}
+
+.banner__content__2 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-black-color);
+}
+
+.banner__content__2 h1 span {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-blue-color);
+}
+
+.banner__content__2 p {
+  color: var(--txt-dark-gery-color);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ---row 2--- */
+
+.ev__div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---column 1 and 3--- */
+
+.banner__content__2__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner__content__2__img img {
+  width: 40%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.div__left__side__content {
+  text-align: center;
+}
+
+.div__left__side__content h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--txt-black-color);
+}
+
+.div__left__side__content p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-dark-gery-color);
+}
+
+/* ---column 2--- */
+
+.ev__div__center__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__div__center__img img {
+  width: 120%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .ev__div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ----------------Download Our App Bannar----------------------- */
+
 /* ##############################  Footer  ################################## */
