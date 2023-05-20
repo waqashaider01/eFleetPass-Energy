@@ -865,13 +865,6 @@ body {
   background-size: cover;
 }
 
-.col__1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .footer__col p {
   color: var(--txt-white-color);
   text-align: justify;
@@ -886,7 +879,7 @@ body {
 }
 
 .footer__col ul {
-  /* padding-left: 0; */
+  padding-left: 0;
 }
 
 .footer__col ul {
@@ -899,4 +892,28 @@ body {
   font-size: 16px;
   line-height: 30px;
   text-decoration-line: underline;
+}
+
+.fa-location-dot:before {
+  margin-right: 10px;
+}
+
+.fa-phone:before {
+  margin-right: 10px;
+}
+
+.fa-solid,
+.fas {
+  line-height: 25px !important;
+  color: var(--txt-white-color);
+}
+
+.footer__col i p {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
+
+.footer__row__2 p {
+  text-align: center;
+  color: var(--txt-white-color);
 }
