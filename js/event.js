@@ -1,16 +1,33 @@
 //Header
 
+// const header = document.getElementById("main__header");
+// let prevScrollPos = window.pageYOffset;
+// function handleScroll() {
+//   const currentScrollPos = window.pageYOffset;
+//   if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
+//     header.style.top = "0";
+//   } else {
+//     header.style.top = `-${header.offsetHeight}px`;
+//   }
+//   prevScrollPos = currentScrollPos;
+// }
+// window.addEventListener("scroll", handleScroll);
+
 const header = document.getElementById("main__header");
 let prevScrollPos = window.pageYOffset;
+
 function handleScroll() {
   const currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
-    header.style.top = "0";
+
+  if (currentScrollPos > prevScrollPos) {
+    header.style.backgroundColor = "transparent";
   } else {
-    header.style.top = `-${header.offsetHeight}px`;
+    header.style.backgroundColor = "#000";
   }
+
   prevScrollPos = currentScrollPos;
 }
+
 window.addEventListener("scroll", handleScroll);
 
 // Hero Section

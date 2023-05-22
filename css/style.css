@@ -53,6 +53,7 @@ body {
   top: 0;
   width: 100%;
   background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* ---Header Logo--- */
@@ -63,7 +64,7 @@ body {
 }
 
 .transparent__header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -827,6 +828,11 @@ body {
   font-size: 16px;
   line-height: 30px;
   text-decoration-line: underline;
+  transition: all 0.4s ease-in-out;
+}
+
+.footer__col ul li a:hover {
+  color: var(--txt-blue-color);
 }
 
 .fa-location-dot:before {
