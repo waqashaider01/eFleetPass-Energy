@@ -35,6 +35,10 @@ body {
   margin-right: 6rem;
 }
 
+.mb-6 {
+  margin-bottom: 5rem;
+}
+
 /* padding */
 
 .my-6 {
@@ -44,6 +48,14 @@ body {
 
 /* ##############################  Header  ################################## */
 
+#main__header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
 /* ---Header Logo--- */
 .header_logo img {
   width: 200px;
@@ -52,7 +64,7 @@ body {
 }
 
 .transparent__header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -164,7 +176,7 @@ body {
 
 /* ##############################  Main  ################################## */
 
-/* ---------Hero Banner--------- */
+/* ---------------------------Hero Banner-------------------------- */
 
 .hero__banner__bg {
   position: relative;
@@ -175,7 +187,6 @@ body {
   display: block;
   width: 100%;
   height: 100vh;
-  /* height: auto; */
 }
 
 .hero__banner__gradient__overlay {
@@ -230,6 +241,13 @@ body {
   }
 }
 
+/* Media queries for extra small screens */
+@media (max-width: 575px) {
+  .hero__carousel__item {
+    top: 50%;
+  }
+}
+
 .hero__carousel__item h6 {
   font-weight: 700;
   font-size: 16px;
@@ -254,7 +272,7 @@ body {
   font-size: 16px;
 }
 
-/* ---carousel content buttons--- */
+/* ---------carousel content buttons---------- */
 
 .hero__banner__carousel__buttons {
   gap: 2rem;
@@ -266,7 +284,7 @@ body {
   border-radius: 8px !important;
   background: transparent !important;
   font-weight: 700 !important;
-  font-size: 18px;
+  font-size: 18px !important;
   color: var(--txt-white-color);
   border: 1px solid var(--bd-white-color) !important;
   padding: 10px 20px !important;
@@ -313,7 +331,7 @@ body {
   border-radius: 8px !important;
   background: var(--bg-color-blue-shade) !important;
   font-weight: 700 !important;
-  font-size: 18px;
+  font-size: 18px !important;
   color: var(--txt-white-color);
   border: 1px solid var(--bd-blue-color) !important;
   padding: 10px 20px !important;
@@ -354,4 +372,638 @@ body {
   width: 100%;
 }
 
+/* ------------------Providing Electric Vehicle Bannar--------------------- */
+
+/* ----column 1----- */
+
+.providing__vehicle__banner__img {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.providing__vehicle__banner__img img {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.customer__count {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--bg-color-blue-shade);
+  color: white;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.customer__count p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ----column 2----- */
+
+/* ---Banner content--- */
+
+.banners__content__1 {
+  text-align: left;
+}
+
+.banners__content__1 h6 {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--txt-blue-color);
+}
+
+.banners__content__1 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-black-color);
+}
+
+.banners__content__1 h1 span {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-blue-color);
+}
+
+.banners__content__1 p {
+  color: var(--txt-dark-gery-color);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ---Banner content buttons---  */
+
+.content__btn__primary {
+  border-radius: 8px !important;
+  background: var(--bg-color-blue-shade) !important;
+  font-weight: 700 !important;
+  font-size: 18px;
+  color: var(--txt-white-color);
+  border: 1px solid var(--bd-blue-color) !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.content__btn__primary:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color-blue-shade);
+  border-radius: 8px;
+  z-index: -2;
+}
+.content__btn__primary:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--bg-color-black-shade);
+  transition: all 0.3s;
+  border-radius: 8px;
+  z-index: -1;
+}
+.content__btn__primary:hover {
+  color: var(--txt-blue-color) !important;
+  border: 1px solid var(--bd-white-color) !important;
+}
+.content__btn__primary:hover:before {
+  width: 100%;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .banners__content__1 h6 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--txt-blue-color);
+  }
+
+  .banners__content__1 h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--txt-black-color);
+  }
+
+  .banners__content__1 h1 span {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--txt-blue-color);
+  }
+
+  .banners__content__1 p {
+    color: var(--txt-dark-gery-color);
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+/* ------------------------------Find Us Bannar------------------------- */
+
+.find__us__bg {
+  background: var(--bg-color-light-grey-shade);
+  /* margin-bottom: 6rem; */
+}
+
+/* ----------------Best EV Charging Stations Bannar------------------- */
+
+/* ---row 1--- */
+
+/* ---Banner content 2---  */
+
+.banner__content__2 {
+  text-align: center;
+}
+
+.banner__content__2 h6 {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--txt-blue-color);
+}
+
+.banner__content__2 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-black-color);
+}
+
+.banner__content__2 h1 span {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--txt-blue-color);
+}
+
+.banner__content__2 p {
+  color: var(--txt-dark-gery-color);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ---row 2--- */
+
+.ev__div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---column 1 and 3--- */
+
+.banner__content__2__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner__content__2__img img {
+  width: 40%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.div__left__side__content {
+  text-align: center;
+}
+
+.div__left__side__content h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--txt-black-color);
+}
+
+.div__left__side__content p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-dark-gery-color);
+}
+
+/* ---column 2--- */
+
+.ev__div__center__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__div__center__img img {
+  width: 120%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .ev__div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ----------------Download Our App Bannar----------------------- */
+
+.app__banner {
+  overflow: hidden;
+}
+
+/* ---row 2--- */
+
+.app__banner__row {
+  position: relative;
+}
+
+.ev__charging_img__2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ev__charging_img__2 img {
+  width: 50%;
+  object-fit: cover;
+  background-size: cover;
+  z-index: 100;
+}
+
+.ev__charging_content__2 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ev__charging_content__2 h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--txt-black-color);
+}
+
+.ev__charging_content__2 p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--txt-dark-gery-color);
+}
+
+.position__img {
+  width: 20% !important;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -5px;
+  left: 495px;
+}
+
+.position__img__1 {
+  width: 20% !important;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -78px;
+  left: 493px;
+}
+
+.position__img__2 {
+  width: 20% !important;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  left: 400px;
+}
+
+/* ----buttons---- */
+
+.anchor_f_1 {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.anchor_f_1 img {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.anchor_f_2 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.anchor_f_2 img {
+  width: 90%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  .position__img {
+    width: 20% !important;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -25px;
+    left: 405px;
+  }
+
+  .position__img__1 {
+    width: 20% !important;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -78px;
+    left: 493px;
+  }
+
+  .position__img__2 {
+    width: 20% !important;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -50px;
+    left: 400px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .position__img {
+    display: none;
+  }
+
+  .position__img__1 {
+    display: none;
+  }
+
+  .position__img__2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ev__charging_img__2 img {
+    width: 80% !important;
+    object-fit: cover;
+  }
+
+  .row__order__1 {
+    order: 2;
+  }
+
+  .row__order__2 {
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .anchor_f_1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .anchor_f_1 img {
+    width: 50%;
+  }
+
+  .anchor_f_2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .anchor_f_2 img {
+    width: 50%;
+  }
+
+  .row__order__1 {
+    order: 2;
+  }
+
+  .row__order__2 {
+    order: 1;
+  }
+}
 /* ##############################  Footer  ################################## */
+
+.footer__bg__color {
+  background: var(--bg-color-black-shade);
+}
+
+.footer__col__img {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.footer__col__img img {
+  width: 80%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.footer__col p {
+  color: var(--txt-white-color);
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer__col h4 {
+  color: var(--txt-white-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footer__col ul {
+  padding-left: 0;
+}
+
+.footer__col ul {
+  list-style-type: none;
+}
+
+.footer__col ul li a {
+  color: var(--txt-white-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  transition: all 0.4s ease-in-out;
+}
+
+.footer__col ul li a:hover {
+  color: var(--txt-blue-color);
+}
+
+.fa-location-dot:before {
+  margin-right: 10px;
+}
+
+.fa-phone:before {
+  margin-right: 10px;
+}
+
+.fa-solid,
+.fas {
+  line-height: 25px !important;
+  color: var(--txt-white-color);
+}
+
+.footer__col i p {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
+
+.footer__row__2 p {
+  text-align: center;
+  color: var(--txt-white-color);
+}
+
+/* --------------------------Media Query------------------------- */
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero__banner__bg img {
+    display: block;
+    width: 100%;
+    height: 700px;
+  }
+
+  .hero__carousel__item {
+    top: 25% !important;
+    transform: translateY(0);
+  }
+
+  .ev__div__center__img img {
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+  .hero__banner__bg img {
+    display: block;
+    width: 100%;
+    height: 750px;
+  }
+
+  .hero__carousel__item {
+    top: 15% !important;
+    transform: translateY(0);
+  }
+
+  .hero__carousel__item h1 {
+    font-size: 30px !important;
+  }
+
+  .hero__carousel__item h1 span {
+    font-size: 30px !important;
+  }
+
+  .hero__banner__carousel__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero__banner__carousel__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ev__div__center__img img {
+    width: 70% !important;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 574px) {
+  .carousel__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__banner__bg img {
+    display: block;
+    width: 100%;
+    height: 670px;
+  }
+
+  .hero__carousel__item {
+    top: 15% !important;
+    transform: translateY(0);
+  }
+
+  .hero__carousel__item h1 {
+    font-size: 25px !important;
+  }
+
+  .hero__carousel__item h1 span {
+    font-size: 25px !important;
+  }
+
+  .hero__banner__carousel__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ev__div__center__img img {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 424px) {
+  .carousel__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__banner__bg img {
+    display: block;
+    width: 100%;
+    height: 800px;
+  }
+
+  .hero__carousel__item {
+    top: 15% !important;
+    transform: translateY(0);
+  }
+
+  .hero__carousel__item h1 {
+    font-size: 20px !important;
+  }
+
+  .hero__carousel__item h1 span {
+    font-size: 20px !important;
+  }
+
+  .hero__banner__carousel__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ev__div__center__img img {
+    width: 100% !important;
+  }
+
+  .carousel__btn__primary_1 {
+    font-size: 14px !important;
+  }
+
+  .carousel__btn__primary_2 {
+    font-size: 14px !important;
+  }
+}
